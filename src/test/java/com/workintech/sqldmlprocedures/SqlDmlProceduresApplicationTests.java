@@ -10,6 +10,7 @@ import com.workintech.sqldmlprocedures.repository.TurRepository;
 import com.workintech.sqldmlprocedures.repository.YazarRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -68,7 +69,7 @@ class SqlDmlProceduresApplicationTests {
 	}
 
 
-    @DisplayName("Adı Mehmet olan tüm yazarları silin.")
+	@DisplayName("Adı Mehmet olan tüm yazarları silin.")
 	@Test
 	void findNullYazarTest(){
 		Yazar yazar = yazarRepository.findByAd("Mehmet");
@@ -112,7 +113,7 @@ class SqlDmlProceduresApplicationTests {
 	@Test
 	void removeOgrenciTest(){
 		Ogrenci ogrenci = new Ogrenci();
-	    ogrenci.setAd("Test");
+		ogrenci.setAd("Test");
 		ogrenci.setSoyad("Test");
 		ogrenci.setCinsiyet("E");
 		ogrenci.setPuan(50);
